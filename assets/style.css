@@ -1,0 +1,318 @@
+    * {
+      box-sizing: border-box;
+    }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #fbc2eb, #fad0c4);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+        margin: 0;
+        padding: 20px;
+      }
+      
+      /* Animasi gradasi */
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      
+    .container {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+      max-width: 950px;
+      margin: auto;
+    }
+
+    h2 {
+      background-color: #3b5998;
+      color: #fff;
+      padding: 14px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .form-left {
+      flex: 2;
+    }
+
+    .form-right {
+      flex: 1;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .nisn-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .nisn-group input {
+      flex: 1;
+    }
+
+    .photo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .photo-preview {
+      width: 75px;
+      height: 100px;
+      object-fit: cover;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    button,
+   button {
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-group button:hover,
+    .container button:hover {
+      background-color: #2e4375;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th,
+    td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #6c8ae4;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .form-section {
+        flex-direction: column;
+      }
+
+      .photo-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .pesan {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .sukses {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .gagal {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .pagination {
+      margin-top: 15px;
+    }
+
+    .pagination a {
+      margin: 0 5px;
+      padding: 6px 12px;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: #007bff;
+    }
+
+    .pagination a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .pagination a[style*="bold"] {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+ 
+   
+
+    /* Animasi border RGB */
+@keyframes rgb-border {
+    0% {
+      border-color: rgb(255, 0, 0);
+      box-shadow: 0 0 8px rgb(255, 0, 0);
+    }
+    25% {
+      border-color: rgb(0, 255, 0);
+      box-shadow: 0 0 8px rgb(0, 255, 0);
+    }
+    50% {
+      border-color: rgb(0, 0, 255);
+      box-shadow: 0 0 8px rgb(0, 0, 255);
+    }
+    75% {
+      border-color: rgb(255, 255, 0);
+      box-shadow: 0 0 8px rgb(255, 255, 0);
+    }
+    100% {
+      border-color: rgb(255, 0, 255);
+      box-shadow: 0 0 8px rgb(255, 0, 255);
+    }
+  }
+  
+  /* Base style untuk semua tombol */
+  button {
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  /* Tombol: Tambah Data */
+  .tambahData {
+    background-color: #00b894;
+    color: white;
+    border-color: #00b894;
+  }
+  .tambahData:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #00a383;
+    transform: scale(1.05);
+  }
+  
+  /* Tombol: Simpan Data */
+  .simpanBtn {
+    background-color: #0984e3;
+    color: white;
+    border-color: #0984e3;
+  }
+  .simpanBtn:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #086bd1;
+    transform: scale(1.05);
+  }
+  
+  /* Tombol: Edit Data */
+  .editBtn {
+    background-color: #fdcb6e;
+    color: #333;
+    border-color: #fdcb6e;
+  }
+  .editBtn:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #f1b742;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Tombol: Simpan Edit */
+  .simpanEditBtn {
+    background-color: #6c5ce7;
+    color: white;
+    border-color: #6c5ce7;
+  }
+  .simpanEditBtn:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #5947c9;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Tombol: Hapus */
+  #hapusBtn {
+    background-color: #d63031;
+    color: white;
+    border-color: #d63031;
+  }
+  #hapusBtn:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #c02b2b;
+    transform: scale(1.05);
+  }
+  
+  /* Tombol: Batal */
+  #batalBtn {
+    background-color: #636e72;
+    color: white;
+    border-color: #636e72;
+  }
+  #batalBtn:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #4d5457;
+    transform: scale(1.05);
+  }
+  
+  /* Tombol: Keluar Form */
+  #keluarBtn {
+    background-color: #fab1a0;
+    color: #2d3436;
+    border-color: #fab1a0;
+  }
+  #keluarBtn:hover {
+    animation: rgb-border 2s infinite;
+    background-color: #f89b86;
+    transform: scale(1.05);
+  }
+  
